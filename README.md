@@ -9,7 +9,7 @@ BACHELOR’S DEGREE | 2019-2023 | LEBANESE INTERNATIONAL UNIVERSITY
 - Major: Information Technology 
 - Related coursework: Objective oriented programming (JAVA), Web programming (HTML – CSS – JavaScript – PHP), CCNA, and System Administration. 
 # Experience 
-IT SUPPORT AGENT | SECUREALM S.A.L. OFFSHORE | November 2023 – PRESENT 
+IT SUPPORT AGENT | SECUREALM S.A.L. OFFSHORE | November 2023 – August 2025 
 - Responding to clients’ queries via email. 
 - Insuring that our product is working the way it should on the client’s computer. 
 - Troubleshooting in office labs on a vast number of devices. 
