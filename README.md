@@ -20,7 +20,7 @@ IT INTERNSHIP | LEBANESE INTERNATIONAL UNIVERSITY | March 2023 – April 2023
 - Setting up and maintaining printers 
 - Building computers and replacing malfunctioning computer parts.   
 # Skills 
-- NETWORKING
+  - NETWORKING
   - QUALITY ASSURANCE
   - TECHNICAL SUPPORT
   - PROJECT MANAGEMENT
