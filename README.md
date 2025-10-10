@@ -39,4 +39,5 @@ Bachelor’s Degree | 2019-2023 | [Lebanese International University](https://li
 
 # 🌐 Languages 
   *- Arabic: Native*
+  
   *- English: Fluent*
