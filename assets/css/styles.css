@@ -1,0 +1,422 @@
+:root {
+  --bg: #0b0d10;
+  --bg-soft: #13171d;
+  --line: rgba(232, 226, 214, 0.1);
+  --text: #ece7dc;
+  --muted: #9d978a;
+  --accent: #c9a36a;
+  --accent-dim: rgba(201, 163, 106, 0.14);
+  --max: 980px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(201, 163, 106, 0.08), transparent 50%),
+    radial-gradient(800px 400px at 100% 0%, rgba(90, 140, 130, 0.08), transparent 45%),
+    var(--bg);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.topbar,
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.shell {
+  width: min(100%, calc(var(--max) + 48px));
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar .shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-block: 16px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+  margin-left: auto;
+}
+
+.nav a {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a150e;
+}
+
+.btn.primary:hover {
+  color: #1a150e;
+  filter: brightness(1.06);
+}
+
+main {
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+
+.hero {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin: 0 0 20px;
+  max-width: 12ch;
+  font-size: clamp(3.2rem, 8vw, 5.6rem);
+  line-height: 0.92;
+}
+
+.lede {
+  max-width: 42rem;
+  margin: 0 0 28px;
+  color: #cfc9bb;
+  font-size: 1.12rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.section,
+.cta {
+  scroll-margin-top: 88px;
+}
+
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.role {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.role-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.role-meta time {
+  display: block;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+
+.role-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.55rem;
+}
+
+.org {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.org a {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.role-body ul,
+.plain {
+  margin: 0;
+  padding-left: 18px;
+  color: #d8d2c6;
+}
+
+.role-body li + li,
+.plain li + li {
+  margin-top: 6px;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.card {
+  padding: 24px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.card time {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 10px 0 10px;
+  font-size: 1.45rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.focus {
+  margin-top: 14px !important;
+  color: var(--text) !important;
+  font-size: 14px;
+}
+
+.skill-block {
+  margin-top: 36px;
+}
+
+.section-head + .skill-block {
+  margin-top: 0;
+}
+
+.skill-block h3 {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.35rem;
+}
+
+.skill-lines {
+  margin: 0;
+  padding-left: 18px;
+  color: #d8d2c6;
+}
+
+.skill-lines li + li,
+.plain li + li {
+  margin-top: 10px;
+}
+
+.skill-lines strong {
+  color: var(--text);
+}
+
+.cta {
+  padding: 72px 0 24px;
+}
+
+.cta h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.cta p {
+  max-width: 36rem;
+  color: var(--muted);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.footnote {
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .nav {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    gap: 14px;
+    overflow-x: auto;
+  }
+
+  .hero {
+    padding-top: 32px;
+  }
+
+  .role,
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-head {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+    background: #0b0d10;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: #0b0d10;
+    color: #ece7dc;
+  }
+
+  .topbar,
+  .pdf-link,
+  .grain {
+    display: none !important;
+  }
+
+  main.shell {
+    width: 100%;
+    padding: 14mm 16mm 18mm;
+  }
+
+  .hero {
+    padding-top: 8px;
+  }
+
+  .card,
+  .role,
+  .skill-block {
+    break-inside: avoid;
+  }
+}
