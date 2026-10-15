@@ -304,8 +304,21 @@ h1 {
   margin-top: 36px;
 }
 
-.section-head + .skill-block {
+.section-head + .skill-block,
+.skill-group .section-head + .skill-block {
   margin-top: 0;
+}
+
+.skills-stack .skill-group + .skill-group {
+  margin-top: 48px;
+}
+
+.skills-nav-target {
+  scroll-margin-top: 88px;
+}
+
+.skills-nav-target + .skill-group {
+  margin-top: 48px;
 }
 
 .skill-block h3 {
